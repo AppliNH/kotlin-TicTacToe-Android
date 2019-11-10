@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#212121"
+    tools:context="com.example.kotlintictactoe.MainActivity">
+
+    <TextView
+        android:id="@+id/appTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+
+        android:text="Title"
+        android:textColor="@color/myWhite"
+        android:textFontWeight="700"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023" />
+
+    <TableLayout
+        android:id="@+id/table"
+        android:layout_width="303dp"
+        android:layout_height="332dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        android:background="#2196F3"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appTitle">
+
+        <TableRow
+            android:id="@+id/row1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="3pt"
+            android:layout_marginBottom="3pt"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/bu1"
+                android:layout_width="80sp"
+                android:layout_height="80sp"
+                android:layout_marginRight="3pt"
+                android:background="@color/myWhite"
+                android:onClick="buClick" />
+
+            <Button
+                android:id="@+id/bu2"
+                android:layout_width="80sp"
+                android:layout_height="80sp"
+                android:layout_marginRight="3pt"
+                android:background="@color/myWhite"
+                android:onClick="buClick" />
+
+            <Button
+                android:id="@+id/bu3"
+                android:layout_width="80sp"
+                android:layout_height="80sp"
+                android:layout_marginRight="3pt"
+                android:background="@color/myWhite"
+                android:onClick="buClick" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/row2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="3pt"
+            android:layout_marginBottom="3pt"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/bu4"
+                android:layout_width="80sp"
+                android:layout_height="80sp"
+                android:layout_marginRight="3pt"
+                android:background="@color/myWhite"
+                android:onClick="buClick" />
+
+            <Button
+                android:id="@+id/bu5"
+                android:layout_width="80sp"
+                android:layout_height="80sp"
+                android:layout_marginRight="3pt"
+                android:background="@color/myWhite"
+                android:onClick="buClick" />
+
+            <Button
+                android:id="@+id/bu6"
+                android:layout_width="80sp"
+                android:layout_height="80sp"
+                android:layout_marginRight="3pt"
+                android:background="@color/myWhite"
+                android:onClick="buClick" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/row3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="3pt"
+            android:layout_marginBottom="3pt"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/bu7"
+                android:layout_width="80sp"
+                android:layout_height="80sp"
+                android:layout_marginRight="3pt"
+                android:background="@color/myWhite"
+                android:onClick="buClick" />
+
+            <Button
+                android:id="@+id/bu8"
+                android:layout_width="80sp"
+                android:layout_height="80sp"
+                android:layout_marginRight="3pt"
+                android:background="@color/myWhite"
+                android:onClick="buClick" />
+
+            <Button
+                android:id="@+id/bu9"
+                android:layout_width="80sp"
+                android:layout_height="80sp"
+                android:layout_marginRight="3pt"
+                android:background="@color/myWhite"
+                android:onClick="buClick" />
+
+        </TableRow>
+
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/player1Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Player 1 :"
+        android:textColor="#FAFAFA"
+        app:layout_constraintBottom_toTopOf="@+id/table"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.152"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appTitle"
+        app:layout_constraintVertical_bias="0.187" />
+
+    <TextView
+        android:id="@+id/playerTitle2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Player 2 :"
+        android:textColor="#FAFAFA"
+        app:layout_constraintBottom_toTopOf="@+id/table"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.152"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/player1Title"
+        app:layout_constraintVertical_bias="0.411" />
+
+    <TextView
+        android:id="@+id/player1Score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="#FAFAFA"
+        app:layout_constraintBottom_toTopOf="@+id/table"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.36"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appTitle"
+        app:layout_constraintVertical_bias="0.187" />
+
+    <TextView
+        android:id="@+id/player2Score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="#FAFAFA"
+        app:layout_constraintBottom_toTopOf="@+id/table"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.36"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/player1Score"
+        app:layout_constraintVertical_bias="0.411" />
+
+    <Switch
+        android:id="@+id/switchToBot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:text="Play VS bot"
+        android:textColor="#FAFAFA"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.82"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.127" />
+
+
+    <!-- <EditText
+         android:id="@+id/userYearDate"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:backgroundTint="@color/myWhite"
+         android:ems="10"
+         android:hint="Enter your year's date"
+         android:textAlignment="center"
+         android:textColorHint="@color/myWhite"
+         android:inputType="date"
+         android:textColor="@color/myWhite"
+         app:layout_constraintBottom_toBottomOf="parent"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toTopOf="parent"
+         app:layout_constraintVertical_bias="0.306" />
+
+     <Button
+         android:id="@+id/ageCalcButton"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="What's my age ?"
+         android:backgroundTint="@color/myWhite"
+         app:layout_constraintBottom_toBottomOf="parent"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintHorizontal_bias="0.51"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toBottomOf="@+id/userYearDate"
+         app:layout_constraintVertical_bias="0.154" />
+
+     <TextView
+         android:id="@+id/userAge"
+         android:layout_width="196dp"
+         android:layout_height="145dp"
+         android:text=""
+         android:textAlignment="center"
+         android:textColor="@color/myWhite"
+         app:layout_constraintBottom_toBottomOf="parent"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintHorizontal_bias="0.497"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toBottomOf="@+id/ageCalcButton"
+         app:layout_constraintVertical_bias="0.46" />-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
