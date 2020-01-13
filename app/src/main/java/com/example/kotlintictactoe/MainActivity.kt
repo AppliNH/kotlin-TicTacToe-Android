@@ -97,16 +97,40 @@ class MainActivity : AppCompatActivity() {
 
         val diag1 = listOf(1, 5, 9)
         val diag2 = listOf(3, 5, 7)
+        Log.d("yeh",""+player.id +player.cells)
 
         when {
-            player.cells.containsAll(row1) -> winner = player
-            player.cells.containsAll(row2) -> winner = player
-            player.cells.containsAll(row3) -> winner = player
-            player.cells.containsAll(col1) -> winner = player
-            player.cells.containsAll(col2) -> winner = player
-            player.cells.containsAll(col3) -> winner = player
-            player.cells.containsAll(diag1) -> winner = player
-            player.cells.containsAll(diag2) -> winner = player
+            player.cells.containsAll(row1) -> {
+                winner = player
+                Log.d("Victory","row1")}
+
+            player.cells.containsAll(row2) -> {
+                winner = player
+                Log.d("Victory","row2")}
+
+            player.cells.containsAll(row3) -> {
+                winner = player
+                Log.d("Victory","row3")}
+
+            player.cells.containsAll(col1) -> {
+                winner = player
+                Log.d("Victory","col1")}
+
+            player.cells.containsAll(col2) -> {
+                winner = player
+                Log.d("Victory","col2")}
+
+            player.cells.containsAll(col3) -> {
+                winner = player
+                Log.d("Victory","col3")}
+
+            player.cells.containsAll(diag1) -> {
+                winner = player
+                Log.d("Victory","diag1")}
+
+            player.cells.containsAll(diag2) -> {
+                winner = player
+                Log.d("Victory","diag2")}
             else -> winner = null
         }
 
